@@ -1,0 +1,5 @@
+<p>Phone Number | Name | Description</p>
+{% for i in phones %}
+<p>{{ i.phone_number }} / {{ i.name }} / {{ i.description }}</p>
+<hr />
+{% endfor %}
