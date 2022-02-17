@@ -1,5 +1,28 @@
-<p>Phone Number | Name | Description</p>
-{% for i in phones %}
-<p>{{ i.phone_number }} / {{ i.name }} / {{ i.description }}</p>
-<hr />
-{% endfor %}
+{% extends 'base.html' %}}
+
+{% block content %}
+<div class='overflow-auto' style='height:50vh'>
+<table class="table table-striped text-right ">
+    <thead class='thead-dark'>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">شماره</th>
+        <th scope="col">نام</th>
+        <th scope="col">توضیحات</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for i in phones %}
+        <tr>
+            <th scope="row">{{ i.id}}</th>
+            <td>{{ i.phone_number}}</td>
+            <td>{{ i.name }}</td>
+            <td>{{ i.description }}</td>
+        </tr>
+      {% endfor %}
+      
+      
+    </tbody>
+  </table>
+</div>
+  {% endblock content %}
